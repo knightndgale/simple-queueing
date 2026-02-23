@@ -10,7 +10,7 @@ const Transaction: React.FC = () => {
   const navigate = useNavigate();
   const { Title, Text } = Typography;
   const { type } = useParams();
-  const { resetSpecificTransaction, next, archive, transactions } = useTransactionStore((state) => state);
+  const { resetSpecificTransaction, next, transactions } = useTransactionStore((state) => state);
 
   const currentTransaction = transactions.find((transaction) => {
     return transaction.transactionType === type;

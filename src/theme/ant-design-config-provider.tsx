@@ -1,7 +1,6 @@
 import { ConfigProvider } from "antd";
 import { colorPalette } from "./color-palette";
 import { sfPro } from "./font";
-import { dimension } from "./dimension";
 
 export const DesignToken: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

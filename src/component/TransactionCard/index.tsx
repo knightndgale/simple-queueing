@@ -11,7 +11,7 @@ const TransactionCard: React.FC<{
   transactions: Transaction[];
 }> = ({ transactions, transactionType, name, number }) => {
   const { Title, Text } = Typography;
-  const { resetSpecificTransaction, next, archive } = useTransactionStore((state) => state);
+  const { resetSpecificTransaction, next } = useTransactionStore((state) => state);
   const currentTransaction = transactions.find((transaction) => transaction.transactionType === transactionType);
 
   const waitingClients = currentTransaction?.clientList.filter((client) => client.status === "waiting").length || 0;
